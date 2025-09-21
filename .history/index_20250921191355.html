@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>נרות ספירלה - חנות הנרות המיוחדת</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-text">נרות ספירלה</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="#products">מוצרים</a>
+                    <a href="#about">אודות</a>
+                    <a href="#contact">צור קשר</a>
+                    <div class="cart-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.7 15.3C4.3 15.7 4.6 16.5 5.1 16.5H17M17 13V17C17 18.1 16.1 19 15 19H9C7.9 19 7 18.1 7 17V13H17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="cart-count">0</span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    זמין עכשיו
+                </div>
+                <h1 class="hero-title">
+                    האירו את הבית שלכם עם <br>
+                    <span class="gradient-text">נרות ספירלה בעבודת יד</span>
+                </h1>
+                <p class="hero-description">
+                    חוו את השילוב המושלם של אמנות ואווירה. הנרות הספירליים הייחודיים שלנו 
+                    יוצרים דפוסי אור מהפנטים ומקיפים את המרחב שלכם בריחות פרימיום.
+                </p>
+
+                <!-- Product Selection -->
+                <div class="product-selection">
+                    <div class="price-display">
+                        <span class="price">₪89</span>
+                        <span class="price-description">נר ספירלה בודד</span>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>כמות:</label>
+                        <div class="quantity-controls">
+                            <button type="button" class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="qty-input" id="quantity">
+                            <button type="button" class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="buy-now-btn">
+                            קנה עכשיו
+                            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 0L9.41 1.41L3.83 7H16V9H3.83L9.41 14.59L8 16L0 8L8 0Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="add-to-cart-btn">
+                            הוסף לעגלה
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Customer Reviews -->
+                <div class="social-proof">
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-text">4.9/5</span>
+                    </div>
+                    <span class="counter">127</span>
+                    <span class="counter-text">לקוחות מרוצים</span>
+                </div>
+            </div>
+
+            <!-- Hero Visual -->
+            <div class="hero-visual">
+                <div class="candle-mockup">
+                    <div class="spiral-candle">
+                        <div class="candle-body"></div>
+                        <div class="flame"></div>
+                        <div class="glow"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <h2 class="section-title">הקולקציה שלנו</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="spiral-candle-mini">
+                            <div class="candle-body-mini"></div>
+                            <div class="flame-mini"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>נר ספירלה קלאסי</h3>
+                        <p>נר בעבודת יד עם ריח לבנדר מרגיע</p>
+                        <div class="product-price">
+                            <span class="price">₪89</span>
+                            <span class="old-price">₪120</span>
+                        </div>
+                        <button class="product-btn">הוסף לעגלה</button>
+                    </div>
+                </div>
+                
+                <div class="product-card featured">
+                    <div class="bestseller-badge">הכי נמכר</div>
+                    <div class="product-image">
+                        <div class="spiral-candle-mini premium">
+                            <div class="candle-body-mini"></div>
+                            <div class="flame-mini"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>נר ספירלה פרימיום</h3>
+                        <p>נר עם שילוב ריחות יוקרתיים - וניל וקינמון</p>
+                        <div class="product-price">
+                            <span class="price">₪149</span>
+                            <span class="old-price">₪199</span>
+                        </div>
+                        <button class="product-btn">הוסף לעגלה</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="spiral-candle-mini large">
+                            <div class="candle-body-mini"></div>
+                            <div class="flame-mini"></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>נר ספירלה גדול</h3>
+                        <p>נר גדול לאירועים מיוחדים - 80 שעות בערה</p>
+                        <div class="product-price">
+                            <span class="price">₪249</span>
+                            <span class="old-price">₪329</span>
+                        </div>
+                        <button class="product-btn">הוסף לעגלה</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="about">
+            <h2 class="features-title">למה לבחור בנרות ספירלה?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>עבודת יד מקצועית</h3>
+                    <p>כל נר נוצר בקפידה עם דפוסים ספירליים מורכבים היוצרים אפקטים ויזואליים מדהימים.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>חומרים איכותיים</h3>
+                    <p>עשויים מ-100% שעוות סויה טבעי עם פתילים ידידותיים לסביבה ושמני ריח פרימיום.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>בערה ממושכת</h3>
+                    <p>העיצוב הספירלי מבטיח בערה אחידה ועד 50+ שעות של אווירה יפה.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2 class="section-title">מה אומרים הלקוחות שלנו</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"הנרות הכי יפים שקניתי אי פעם! האור שהם יוצרים פשוט קסום."</p>
+                    <div class="customer-name">- שרה כהן</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"איכות מעולה ושירות מושלם. הנרות בוערים שעות רבות ומריחים נפלא."</p>
+                    <div class="customer-name">- דוד לוי</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p>"המתנה המושלמת! כל מי שמקבל נר ספירלה נהיה מאוהב."</p>
+                    <div class="customer-name">- מירי אבישי</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>צור קשר</h4>
+                    <p>📞 03-1234567</p>
+                    <p>📧 info@spiralcandles.co.il</p>
+                    <p>📍 תל אביב, ישראל</p>
+                </div>
+                <div class="footer-section">
+                    <h4>שירות לקוחות</h4>
+                    <a href="#">משלוחים והחזרות</a>
+                    <a href="#">תנאי שימוש</a>
+                    <a href="#">מדיניות פרטיות</a>
+                </div>
+                <div class="footer-section">
+                    <h4>עקבו אחרינו</h4>
+                    <div class="social-links">
+                        <a href="#">פייסבוק</a>
+                        <a href="#">אינסטגרם</a>
+                        <a href="#">וואטסאפ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 נרות ספירלה. כל הזכויות שמורות.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
