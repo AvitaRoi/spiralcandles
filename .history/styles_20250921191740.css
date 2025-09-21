@@ -141,7 +141,7 @@ body::before {
     display: inline-block;
     padding: 0.5rem 1rem;
     background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.3);
     border-radius: 2rem;
     font-size: 0.875rem;
     font-weight: 500;
@@ -151,8 +151,8 @@ body::before {
 }
 
 @keyframes glow-pulse {
-    from { box-shadow: 0 0 10px rgba(99, 102, 241, 0.1); }
-    to { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+    from { box-shadow: 0 0 10px rgba(99, 102, 241, 0.2); }
+    to { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
 }
 
 .hero-title {
@@ -492,7 +492,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
 }
 
 .spiral-candle-mini {
@@ -667,7 +667,7 @@ body::before {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    background: rgba(99, 102, 241, 0.03);
+    background: rgba(99, 102, 241, 0.02);
     border-radius: 2rem;
 }
 

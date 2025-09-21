@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .customer-form input,
         .customer-form textarea {
             padding: 1rem;
-            background: var(--surface);
+            background: var(--background);
             border: 2px solid var(--border-color);
             border-radius: 0.5rem;
             color: var(--text-primary);
@@ -492,10 +492,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     // Initialize page
-    console.log('🕯️ נרות ספירלה - אתר מכירות טעון בהצלחה!');
+    console.log('🕯️ Spiral Candles waitlist page loaded successfully!');
     
-    // Check if user has items in cart
-    if (cart.length > 0) {
-        console.log(`🛒 יש לך ${cart.length} מוצרים בעגלת הקניות`);
+    // Check if user is returning
+    const storedEmail = localStorage.getItem('waitlist-email');
+    if (storedEmail) {
+        console.log('👋 Welcome back! You\'re already on our waitlist.');
     }
 });

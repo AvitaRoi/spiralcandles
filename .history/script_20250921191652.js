@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .customer-form input,
         .customer-form textarea {
             padding: 1rem;
-            background: var(--surface);
+            background: var(--background);
             border: 2px solid var(--border-color);
             border-radius: 0.5rem;
             color: var(--text-primary);

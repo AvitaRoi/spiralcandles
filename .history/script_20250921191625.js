@@ -236,160 +236,20 @@ document.addEventListener('DOMContentLoaded', function() {
         return 1 - Math.pow(1 - t, 3);
     }
     
-    // Add styles for modal and notifications
-    const dynamicStyles = `
-        .modal-content {
-            background: var(--surface);
-            border-radius: 1rem;
-            padding: 2rem;
-            max-width: 500px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-            direction: rtl;
+    // Loading spinner styles
+    const spinnerStyles = `
+        .loading-spinner {
+            animation: spin 1s linear infinite;
         }
         
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1rem;
-        }
-        
-        .modal-header h3 {
-            color: var(--text-primary);
-            margin: 0;
-        }
-        
-        .close-modal {
-            background: none;
-            border: none;
-            font-size: 2rem;
-            color: var(--text-muted);
-            cursor: pointer;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            background: var(--border-color);
-            color: var(--text-primary);
-        }
-        
-        .order-summary {
-            background: rgba(99, 102, 241, 0.05);
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            margin-bottom: 2rem;
-        }
-        
-        .order-summary h4 {
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-        
-        .order-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .order-total {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .customer-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        
-        .customer-form input,
-        .customer-form textarea {
-            padding: 1rem;
-            background: var(--surface);
-            border: 2px solid var(--border-color);
-            border-radius: 0.5rem;
-            color: var(--text-primary);
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-        
-        .customer-form input:focus,
-        .customer-form textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        
-        .modal-footer {
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .complete-order-btn {
-            width: 100%;
-            padding: 1rem 2rem;
-            background: var(--gradient);
-            border: none;
-            border-radius: 0.75rem;
-            color: white;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .complete-order-btn:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-        }
-        
-        .complete-order-btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slide-out {
-            to { 
-                opacity: 0; 
-                transform: translateX(100%); 
-            }
-        }
-        
-        @keyframes slide-in {
-            from { 
-                opacity: 0; 
-                transform: translateX(100%); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateX(0); 
-            }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     `;
     
     const styleSheet = document.createElement('style');
-    styleSheet.textContent = dynamicStyles;
+    styleSheet.textContent = spinnerStyles;
     document.head.appendChild(styleSheet);
     
     // Intersection Observer for animations
@@ -492,10 +352,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     // Initialize page
-    console.log('🕯️ נרות ספירלה - אתר מכירות טעון בהצלחה!');
+    console.log('🕯️ Spiral Candles waitlist page loaded successfully!');
     
-    // Check if user has items in cart
-    if (cart.length > 0) {
-        console.log(`🛒 יש לך ${cart.length} מוצרים בעגלת הקניות`);
+    // Check if user is returning
+    const storedEmail = localStorage.getItem('waitlist-email');
+    if (storedEmail) {
+        console.log('👋 Welcome back! You\'re already on our waitlist.');
     }
 });
