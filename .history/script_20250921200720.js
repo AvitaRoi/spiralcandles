@@ -239,11 +239,10 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     // Initialize page
-    console.log('🕯️ נרות ספירלה - רשימת המתנה טעונה בהצלחה!');
+    console.log('🕯️ נרות ספירלה - אתר מכירות טעון בהצלחה!');
     
-    // Check if user is returning
-    const storedEmail = localStorage.getItem('waitlist-email');
-    if (storedEmail) {
-        console.log('👋 ברוכים השבים! אתם כבר ברשימת ההמתנה שלנו.');
+    // Check if user has items in cart
+    if (cart.length > 0) {
+        console.log(`🛒 יש לך ${cart.length} מוצרים בעגלת הקניות`);
     }
 });
